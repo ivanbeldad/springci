@@ -16,4 +16,4 @@ env:
 
 after_success:
     - "cp target/springci-0.0.1.war ./ROOT.war"
-    - "curl ftp://springci.rackian.com -P - -T ROOT.war -u $FTP_USER:$FTP_PASSWORD"
+    - "curl ftp://springci.rackian.com -T ROOT.war -u $FTP_USER:$FTP_PASSWORD -P ''"
