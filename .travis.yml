@@ -15,5 +15,5 @@ env:
     - secure: "gGvmn06fv7tFS3ZW/nGp2mW4Lud5ET4CLCwHCfhE2pNSNMRE6VwCxqLFBcb/kAXyJq/o7Uz8OAfr/T1+FYOjQnPwLEDzq8mtvo/NnU6wA4AT9bhkojEsvq47AxwwC4AeVB9eEqU2pa7BMyyHx/ZW/PzMJxOq2Hkhx6MopJNNRXdkKcV7nRsfkf0prZhbS5fnDlov8EamnP+hAG9XnPaTYNhGfGZX/hK8se5u/yu41hgEjb4F6Yjcwnf8l+ODvHuJfpzC+m0jhAofhsw1TENb/yCEknIeKR+j2w4TPlkqadSlcn1y4dc8jsNyAsGa7zOAyCxEnQCWT2SgFhv+53S5s7pXFjRrBC8Dk21TmEgXwmzqe1OT0UTdK9fF1kPCr1ErulAw/AQK2rH0seAqavPCiuqKcQ0EY1ivzwSFJumryzzKQnM+YFuTYAPtG8bkkr95ksCLJXydm0JUd8Kzdh0j4olPXvSSrkmPmTAlIxV00hdiKcXLZ0s5vg4UsPoZQvLmxrNXBAgkO6/wkL1Mze+0RxPdZKV7d0vZpHsrVJ5Wxo/d5AwPSBIOnIIfYrXFzpMYL8My/BkAHSZeO2O3h2Q5kN3fVR2enbSqvnvSpsfK+rRh5xn57RnXjHzZuQkzo0NGXPkCWcbZxouvsBb0mvT4n4x3lRfNw3vZcrpQAagByNo="
 
 after_success:
-    "cp target/springci-0.0.1.war ./ROOT.war"
-    "curl ftp://springci.rackian.com -P - -T ROOT.war -u $FTP_USER:$FTP_PASSWORD"
+    - "cp target/springci-0.0.1.war ./ROOT.war"
+    - "curl ftp://springci.rackian.com -P - -T ROOT.war -u $FTP_USER:$FTP_PASSWORD"
