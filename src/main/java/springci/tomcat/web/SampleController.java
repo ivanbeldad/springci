@@ -32,6 +32,7 @@ public class SampleController {
 	@RequestMapping("/")
 	@ResponseBody
 	public String helloWorld() {
-		return this.helloWorldService.getHelloMessage();
+		return "";
+//		return this.helloWorldService.getHelloMessage();
 	}
 }
